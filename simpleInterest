@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class simpleInterest {
+
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the Valur of p,r,t");
+		double p=sc.nextDouble();
+		double r=sc.nextDouble();
+		short t=sc.nextShort();
+		double si=(p*r*t)/100;
+		
+		System.out.println(si+ " Simple Interest");
+
+	}
+
+}

@@ -1,0 +1,48 @@
+//Program to print the number of pair sum occur in the given array
+import java.util.Scanner;
+
+public class Pair_Sum {
+	
+	public static int[] takeInput()
+	{
+
+		Scanner sc=new Scanner(System.in);
+		int size=sc.nextInt();
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++) {
+			arr[i]=sc.nextInt();
+		}
+		return arr;
+	}
+	public static void printArray(int arr[])
+	{
+		for(int element:arr)
+		{
+			System.out.print(element+" ");
+		}
+		System.out.println();
+}
+	public static int pairSum(int arr[],int x)
+	{
+		int c=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]+arr[j]==x)
+				{
+					c+=1;
+				}
+			}
+		}
+		return c;
+
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in); {
+			int arr[]=takeInput();
+			int x=scanner.nextInt();
+			System.out.println(Pair_Sum.pairSum(arr, x));
+		}
+	}
+}
